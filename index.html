@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <title>聊天系统</title>
+</head>
+<body>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2 class="bot">登录或注册</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label class="bot" for="username">用户名:</label>
+                    <input type="text" id="username" name="username" required minlength="3" maxlength="50">
+                </div>
+                <div class="input-group">
+                    <label class="bot" for="password">密码:</label>
+                    <input type="password" id="password" name="password" required minlength="6" maxlength="30">
+                </div>
+                <div class="input-group">
+                    <label class="bot" for="avatar">头像:</label>
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                </div>
+                <div class="buttons">
+                    <button id="registerButton" class="bot" type="button">注册</button>
+                    <button id="loginButton" class="bot" type="button">登录</button>
+                </div>
+            </form>
+            <p id="loginError" class="error"></p>
+        </div>
+    </div>
+<!--
+-请勿删除下段:
+-作者: Codbt
+-Github: https://github.com/Block-T/PHP-ChatRoom
+-某些没有深度优化好的地方请你自行优化
+-->
+    <div id="chatContainer" class="hidden">
+        <div id="chatHeader">
+            <font size="5"><b>聊天室</b></font>
+            <span id="connectionStatus">连接中...</span>
+            <button id="toggleDayNight">白天/夜晚</button>
+        </div>
+        <div id="chatMessages"></div>
+        <div id="chatInput">
+            <textarea id="messageInput" maxlength="120" placeholder="输入你的消息..."></textarea>
+            <button id="sendButton">发送</button>
+        </div>
+    </div>
+
+    <script key="Block-T" src="src/js/scripts.js"></script>
+</body>
+</html>
